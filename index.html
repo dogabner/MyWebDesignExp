@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h2 style="color:black" id="cute_text">Click on a button to change the color</h2>
+        <form>
+            <input type="button" name="button1" value="ChangeUsingMethod1" onclick="changeColor1()">
+            <input type="button" name="button1" value="ChangeUsingMethod2" onclick="changeColor2()">
+            <input type="button" name="button1" value="ChangeUsingMethod3" onclick="changeColor3()">
+        </form>
+        <p>how are you </p>
+        <p>Fine thanks</p>
+        <div>
+            <input type="button" name="addHr" value="addHr" onclick="addHr()">
+            <input type="button" name="copy it" value="Copy" onclick="copyFunc()">
+        </div>
+        <div>
+            <ul id="list">
+                <li>Fuck you</li>
+                <li>Suck my dick</li>
+                <li>Stick in it</li>
+            </ul>
+        </div>
+        <div id="dest">
+            
+        </div>
+        <script>
+            function changeColor1(){
+                document.childNodes[1].childNodes[2].childNodes[1].style.color="red";
+            }
+            function changeColor2(){
+                document.getElementsByTagName("h2")[0].style.color="yellow";
+            }
+            function changeColor3(){
+                document.getElementById("cute_text").style.color="blue";
+            }
+            function addHr(){
+                var a = document.createElement("hr");
+                var h2 = document.getElementsByTagName("h2")[0];
+                document.body.insertBefore(a, h2);
+            }
+            function copyFunc(){
+                var nodes = document.getElementById("list");
+                console.log(nodes);
+                var dest = document.getElementById("dest");
+                console.log(dest);                
+                var theClone = nodes.cloneNode(true);
+                console.log(theClone);                
+                dest.appendChild(nodes);
+            }
+            result = document.createElement("div");
+            result2 = document.createTextNode("shit");
+            result3 = document.createElement("br");
+            destParent = document.getElementById("cute_text");
+            destParent.appendChild(result2, destParent.firstChild);
+        </script>
+    </body>    
+</html>
+
