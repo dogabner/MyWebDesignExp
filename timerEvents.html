@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body onload="set_thing_up()">
+    <h1>Alarm clock</h1>
+    <script>
+        function set_thing_up() {
+            wait_duration = prompt("How long do you" + "want to sleep?");
+            if (isNaN(Number(wait_duration)))
+                alert("You're really a dick.")
+            else if (wait_duration) {
+                setTimeout(show_wake_up_message, wait_duration);
+            }
+        }
+
+        function show_wake_up_message() {
+            alert("Wake up!!!");
+        }
+    </script>
+</body>
+
+</html>
