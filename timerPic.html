@@ -13,12 +13,12 @@
             the_image.style.left = x_pos;
             the_timer = setTimeout("set_timer()", 50);            
         }
-        set_timer();
+        
     </script>
 
 </head>
 
-<body>
+<body onload="set_timer()">
     <img src="image/pic.jpeg" alt="Sigua" width="40%" id="pic" style="position:absolute; left: 0px">
     <button type="button" onclick="clearTimeout(the_timer);">Stop Timer</button>
 </body>
